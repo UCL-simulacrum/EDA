@@ -4,8 +4,7 @@
 
 files and subdirectories where the notebook is:
 
-.
-├── Simulacrum-data-dictionary.xlsx
-├── cancerdata_EDA.ipynb
-├── lookup_tables
-└── simulacrum_release_v1.1.0
+Simulacrum-data-dictionary.xlsx
+cancerdata_EDA.ipynb
+lookup_tables
+simulacrum_release_v1.1.0
