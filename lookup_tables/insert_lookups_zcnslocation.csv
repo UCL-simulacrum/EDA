@@ -1,0 +1,49 @@
+"ZCNSLOCATIONID","SHORTDESC","DESCRIPTION","EXPORTID","STARTDATE","ENDDATE","SORT"
+"01","Frontal lobe","","01",,,1
+"02","Temporal lobe","","02",,,2
+"03","Parietal lobe","","03",,,3
+"04","Occipital lobe","","04",,,4
+"05","Pineal region","","05",,,5
+"06","Hypothalamic","","06",,,6
+"07","Basal ganglia/thalamic","","07",,,7
+"08","Cerebellar","","08",,,8
+"09","Midbrain","","09",,,9
+"10","Pons","","10",,,10
+"11","Medulla","","11",,,11
+"12","Fourth ventricle","","12",,,12
+"13","Third ventricle","","13",,,13
+"14","Lateral ventricle","","14",,,14
+"15","Parasagittal/parafalcine dura","","15",,,15
+"16","Posterior fossa convexity dura","","16",,,16
+"17","Convexity dura","","17",,,17
+"18","Petrous temporal bone","","18",,,18
+"19","Orbital roof","","19",,,19
+"20","Skull vault","","20",,,20
+"21","Scalp","","21",,,21
+"22","Anterior cranial fossa","","22",,,22
+"23","Middle cranial fossa","","23",,,23
+"25","Infratemporal fossa","","25",,,24
+"26","Pterygopalatine fossa","","26",,,25
+"27","Anterior clinoid dura","","27",,,26
+"28","Sphenoid wing dura","","28",,,27
+"29","Subfrontal dura","","29",,,28
+"30","Suprasellar dura","","30",,,29
+"31","Clival dura","","31",,,30
+"32","Cavernous sinus","","32",,,31
+"33","Cerebellopontine angle","","33",,,32
+"34","Jugular bulb","","34",,,33
+"35","Venous angle dura","","35",,,34
+"36","Foramen magnum","","36",,,35
+"37","Cervical intramedullary","","37",,,36
+"38","Cervical intradural","","38",,,37
+"39","Cervical extradural","","39",,,38
+"40","Cervical bony","","40",,,39
+"41","Thoracic intramedullary","","41",,,40
+"42","Thoracic intradural","","42",,,41
+"43","Thoracic extradural","","43",,,42
+"44","Thoracic bony","","44",,,43
+"45","Lumbar intramedullary","","45",,,44
+"46","Lumbar intradural","","46",,,45
+"47","Lumbar extradural","","47",,,46
+"48","Lumbar bony","","48",,,47
+"98","Other","","98",,,48

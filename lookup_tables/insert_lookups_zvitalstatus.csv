@@ -1,0 +1,4 @@
+"ZVITALSTATUSID","SHORTDESC","DESCRIPTION","EXPORTID","STARTDATE","ENDDATE","SORT"
+"A","Alive","","A",,,1
+"D","Dead","","D",,,2
+"X","Exit Posting","","X",,,3
