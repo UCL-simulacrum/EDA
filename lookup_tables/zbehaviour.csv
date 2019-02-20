@@ -1,0 +1,9 @@
+ZBEHAVIOURID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","BENIGN",null,"0",null,null,1
+"1","UNCERTAIN",null,"1",null,null,2
+"2","IN SITU",null,"2",null,null,3
+"3","MALIGNANT",null,"3",null,null,4
+"5","MICRO-INVASIVE",null,"5",null,null,5
+"6","MALIGNANT, METASTATIC/ SECONDARY SITE",null,"6",null,null,6
+"9","MALIGNANT, UNCERTAIN WHETHER PRIMARY OR METASTATIC",null,"9",null,null,7
+"X","UNKNOWN/INAPPLICABLE",null,"X",null,null,-1

@@ -1,0 +1,5 @@
+ZCANCERCAREPLANINTENTID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"9","Not known",null,"9",null,null,4
+"C","Curative",null,"C",null,null,1
+"X","No active treatment",null,"X",null,null,3
+"Z","Non Curative",null,"Z",null,null,2

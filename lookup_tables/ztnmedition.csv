@@ -1,0 +1,9 @@
+ZTNMEDITIONID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+5,"5",null,"5",null,null,-1
+6,"6",null,"6",null,null,-1
+7,"7",null,"7",null,null,-1
+20,"UICC 5",null,"5U",null,null,null
+21,"UICC 6",null,"6U",null,null,null
+22,"UICC 7",null,"7U",null,null,null
+23,"AJCC 7",null,"7J",null,null,null
+24,"Unknown",null,"UNKNOWN",null,null,null

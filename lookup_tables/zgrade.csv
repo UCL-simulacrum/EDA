@@ -1,0 +1,13 @@
+ZGRADEID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","0 BORDERLINE MALIGNANCY","Fake lookup for 0","GX",null,null,-1
+"1","1 / I / WELL DIFFERENTIATED","Fake lookup for 1","G1",null,null,1
+"2","2 / II / MODERATELY DIFFERENTIATED","Fake lookup for 2","G2",null,null,3
+"3","3 / III / POORLY DIFFERENTIATED","Fake lookup for 3","G3",null,null,5
+"4","4 / IV / UNDIFFERENTIATED / ANAPLASTIC","Fake lookup for 4","G4",null,null,7
+"5","T CELL","Fake lookup for 5","G5",null,null,-1
+"6","B CELL","Fake lookup for 6","G6",null,null,-1
+"7","NULL CELL","Fake lookup for 7","G7",null,null,-1
+"H","HIGH",null,null,null,null,15
+"I","INTERMEDIATE",null,null,null,null,13
+"L","LOW",null,null,null,null,11
+"X","X","Fake lookup for X","GX",null,null,9

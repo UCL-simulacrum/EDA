@@ -1,0 +1,14 @@
+ZDEATHLOCATIONID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT,COSDID
+"1","HOSPITAL",null,"1",null,null,null,"10"
+"2","PRIVATE HOME",null,"4",null,null,null,"20"
+"3","HOSPICE NOS",null,"2",null,null,null,"30"
+"4","NURSING HOME",null,"5",null,null,null,null
+"4077","NHS HOSPICE / SPECIALIST PALLIATIVE CARE UNIT",null,"2",null,null,null,"2"
+"4087","VOLUNTARY HOSPICE / SPECIALIST PALLIATIVE CARE UNIT",null,"3",null,null,null,"3"
+"4097","CARE HOME",null,"5",null,null,null,"40"
+"4107","PATIENT""S OWN HOME",null,"4",null,null,null,"21"
+"4117","OTHER PRIVATE RESIDENCE (E.G. RELATIVES HOME, CARERS HOME)",null,"4",null,null,null,"22"
+"4127","CARE HOME WITH NURSING",null,"5",null,null,null,"41"
+"4137","CARE HOME WITHOUT NURSING",null,"5",null,null,null,"42"
+"5","OTHER",null,"6",null,null,null,"50"
+"X","UNKNOWN",null,"X",null,null,null,null

@@ -1,0 +1,8 @@
+ZCNSID,SHORTDESC
+Y1,Yes - Clinical Nurse Specialist present when PATIENT given diagnosis
+Y2,Yes - but Clinical Nurse Specialist not present when PATIENT given diagnosis (Retired 1 April 2015)
+Y3,Yes - Clinical Nurse Specialist not present when PATIENT given diagnosis but saw PATIENT during same Consultant Clinic Session
+Y4,Yes - Clinical Nurse Specialist not present during Consultant Clinic Session when PATIENT given diagnosis but saw PATIENT at other time
+Y5,Yes - Clinical Nurse Specialist not present when PATIENT given diagnosis but the PATIENT was seen by a trained member of the Clinical Nurse Specialist team
+NI,No - PATIENT not seen at all by Clinical Nurse Specialist but Clinical Nurse Specialist informed of diagnosis
+NN,No - PATIENT not seen at all by Clinical Nurse Specialist and Clinical Nurse Specialist not informed of diagnosis

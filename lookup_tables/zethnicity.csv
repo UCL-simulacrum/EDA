@@ -1,0 +1,72 @@
+ZETHNICITYID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","WHITE",null,"0",null,null,2
+"8","8 OTHER",null,"8",null,null,9
+"A","WHITE BRITISH",null,"A",null,null,101
+"B","WHITE IRISH",null,"B",null,null,102
+"C","C ANY OTHER WHITE BACKGROUND",null,"C",null,null,103
+"C2","Northern Irish",null,"C2",null,null,-1
+"C3","Other white, white unspecified",null,"C3",null,null,-1
+"CA","English",null,"CA",null,null,-1
+"CB","Scottish",null,"CB",null,null,-1
+"CC","Welsh",null,"CC",null,null,-1
+"CD","Cornish",null,"CD",null,null,-1
+"CE","Cypriot (part not stated)",null,"CE",null,null,-1
+"CF","Greek",null,"CF",null,null,-1
+"CG","Greek Cypriot",null,"CG",null,null,-1
+"CH","Turkish",null,"CH",null,null,-1
+"CJ","Turkish Cypriot",null,"CJ",null,null,-1
+"CK","Italian",null,"CK",null,null,-1
+"CL","Irish Traveller",null,"CL",null,null,-1
+"CM","Traveller",null,"CM",null,null,-1
+"CN","Gypsy/Romany",null,"CN",null,null,-1
+"CP","Polish",null,"CP",null,null,-1
+"CQ","All republics which made up the former USSR",null,"CQ",null,null,-1
+"CR","Kosovan",null,"CR",null,null,-1
+"CS","Albanian",null,"CS",null,null,-1
+"CT","Bosnian",null,"CT",null,null,-1
+"CU","Croatian",null,"CU",null,null,-1
+"CV","Serbian",null,"CV",null,null,-1
+"CW","Other republics which made up the former Yugoslavia",null,"CW",null,null,-1
+"CX","Mixed white",null,"CX",null,null,-1
+"CY","Other white European, European unspecified, European mixed",null,"CY",null,null,-1
+"D","WHITE AND BLACK CARIBBEAN",null,"D",null,null,129
+"E","MIXED WHITE AND BLACK AFRICAN",null,"E",null,null,130
+"F","MIXED WHITE AND ASIAN",null,"F",null,null,131
+"G","G ANY OTHER MIXED BACKGROUND",null,"G",null,null,132
+"GA","Black and Asian",null,"GA",null,null,-1
+"GB","Black and Chinese",null,"GB",null,null,-1
+"GC","Black and White",null,"GC",null,null,-1
+"GD","Chinese and White",null,"GD",null,null,-1
+"GE","Asian and Chinese",null,"GE",null,null,-1
+"GF","Other Mixed, Mixed Unspecified",null,"GF",null,null,-1
+"H","ASIAN INDIAN",null,"H",null,null,147
+"J","ASIAN PAKISTANI",null,"J",null,null,148
+"K","ASIAN BANGLADESHI",null,"K",null,null,149
+"L","L ANY OTHER ASIAN BACKGROUND",null,"L",null,null,150
+"LA","Mixed Asian",null,"LA",null,null,-1
+"LB","Punjabi",null,"LB",null,null,-1
+"LC","Kashmiri",null,"LC",null,null,-1
+"LD","East African Asian",null,"LD",null,null,-1
+"LE","Sri Lanka",null,"LE",null,null,-1
+"LF","Tamil",null,"LF",null,null,-1
+"LG","Sinhalese",null,"LG",null,null,-1
+"LH","British Asian",null,"LH",null,null,-1
+"LJ","Caribbean Asian",null,"LJ",null,null,-1
+"LK","Other Asian, Asian unspecified",null,"LK",null,null,-1
+"M","BLACK CARIBBEAN",null,"M",null,null,139
+"N","BLACK AFRICAN",null,"N",null,null,140
+"P","P ANY OTHER BLACK BACKGROUND",null,"P",null,null,141
+"PA","Somali",null,"PA",null,null,-1
+"PB","Mixed Black",null,"PB",null,null,-1
+"PC","Nigerian",null,"PC",null,null,-1
+"PD","Black British",null,"PD",null,null,-1
+"PE","Other Black, Black unspecified",null,"PE",null,null,-1
+"R","CHINESE",null,"R",null,null,162
+"S","S ANY OTHER ETHNIC GROUP",null,"S",null,null,163
+"SA","Vietnamese",null,"SA",null,null,-1
+"SB","Japanese",null,"SB",null,null,-1
+"SC","Filipino",null,"SC",null,null,-1
+"SD","Malaysian",null,"SD",null,null,-1
+"SE","Any Other Group",null,"SE",null,null,-1
+"X","X NOT KNOWN",null,"99",null,null,1
+"Z","NOT STATED",null,"Z",null,null,169

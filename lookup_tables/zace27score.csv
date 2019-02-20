@@ -1,0 +1,6 @@
+ZACE27SCOREID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","None",null,"0",null,null,1
+"1","Mild",null,"1",null,null,2
+"2","Moderate",null,"2",null,null,3
+"3","Severe",null,"3",null,null,4
+"9","Not known",null,"9",null,null,5

@@ -1,0 +1,6 @@
+ZSEXID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","X NOT KNOWN",null,"0",null,null,5
+"1","MALE",null,"1",null,null,1
+"2","FEMALE",null,"2",null,null,2
+"4000","INDETERMINATE",null,"9",null,null,-1
+"9","NOT SPECIFIED",null,"9",null,null,3

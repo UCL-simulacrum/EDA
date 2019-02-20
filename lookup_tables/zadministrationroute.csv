@@ -1,0 +1,14 @@
+﻿ZADMINISTRATIONROUTEID,SHORTDESC
+1,Intravenous
+2,Oral
+3,Intrathecal
+4,Intramuscular
+5,Subcutaneous
+6,Intraarterial
+7,Intraperitoneal
+8,Other intracavity Intracavernous
+9,Intra-Vesicular Intravesical
+10,Intratumour Intralesional
+11,Topical Cutaneous
+12,Intradermal
+99,Other

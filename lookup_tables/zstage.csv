@@ -1,0 +1,38 @@
+ZSTAGEID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","0",null,"0",null,null,2
+"0A",null,null,"0A",null,null,3
+"0IS",null,null,"0IS",null,null,4
+"1","1",null,"1",null,null,5
+"1A",null,null,"1A",null,null,7
+"1A1",null,null,"1A1",null,null,9
+"1A2",null,null,"1A2",null,null,11
+"1B",null,null,"1B",null,null,13
+"1B1",null,null,"1B1",null,null,15
+"1B2",null,null,"1B2",null,null,17
+"1C",null,null,"1C",null,null,19
+"1E",null,null,"1E",null,null,21
+"1S",null,null,"1S",null,null,22
+"2","2",null,"2",null,null,23
+"2A",null,null,"2A",null,null,24
+"2A1",null,null,"2A1",null,null,25
+"2A2",null,null,"2A2",null,null,26
+"2B",null,null,"2B",null,null,27
+"2C",null,null,"2C",null,null,29
+"2E",null,null,"2E",null,null,31
+"2S",null,null,"2S",null,null,32
+"3","3",null,"3",null,null,33
+"3A",null,null,"3A",null,null,35
+"3B",null,null,"3B",null,null,37
+"3C",null,null,"3C",null,null,39
+"3E",null,null,"3E",null,null,41
+"3S",null,null,"3S",null,null,42
+"4","4",null,"4",null,null,43
+"4A",null,null,"4A",null,null,45
+"4B",null,null,"4B",null,null,47
+"4C",null,null,"4C",null,null,49
+"4S",null,null,"4S",null,null,50
+"5","5","Outdated or invalid code 5","5",null,null,-1
+"6","6 NOT STAGEABLE",null,"6",null,null,55
+"?","INSUFFICIENT INFO",null,"?",null,null,51
+"U","UNSTAGEABLE",null,"U",null,null,53
+"X","X NOT STAGED",null,"X",null,null,57

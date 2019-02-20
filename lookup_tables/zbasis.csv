@@ -1,0 +1,19 @@
+ZBASISID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"0","DEATH CERTIFICATE",null,"0","2000-01-01",null,1
+"1","CLINICAL",null,"1","2000-01-01",null,2
+"2","CLINICAL INVESTIGATION",null,"2","2000-01-01",null,3
+"4","SPECIFIC TUMOUR MARKERS",null,"4","2000-01-01",null,4
+"5","CYTOLOGY",null,"5","2000-01-01",null,5
+"6","HISTOLOGY OF METASTASIS",null,"6","2000-01-01",null,6
+"7","HISTOLOGY OF PRIMARY",null,"7","2000-01-01",null,7
+"9","X NOT KNOWN",null,"X","2000-01-01",null,8
+"BASIS41_0","Invalid code BASIS41_0",null,"0",null,null,-1
+"BASIS41_1","HISTOLOGY (NEW CODES: 6, 7)",null,"1",null,"1999-12-31",21
+"BASIS41_2","CYTOLOGY (NEW CODES: 5)",null,"2",null,"1999-12-31",22
+"BASIS41_3","OTHER SPECIAL TESTS (NEW CODES: 3)",null,"3",null,"1999-12-31",23
+"BASIS41_4","X-RAYS, CLINICAL (NEW CODES: 1, 2)",null,"4",null,"1999-12-31",24
+"BASIS41_5","Invalid code BASIS41_5",null,"5",null,null,-1
+"BASIS41_6","Invalid code",null,null,null,null,-1
+"BASIS41_7","Invalid code BASIS41_7",null,"7",null,null,-1
+"BASIS41_X","UNKNOWN/INAPPLICABLE (NEW CODES: 0, X)",null,"X",null,"1999-12-31",25
+"X","X","Fake lookup for X","X",null,null,-1

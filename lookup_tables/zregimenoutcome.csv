@@ -1,0 +1,7 @@
+ZREGIMENOUTCOMEID,SHORTDESC
+0,Treatment completed as prescribed
+1,PATIENT died
+2,Progressive disease during Chemotherapy
+3,Acute Chemotherapy toxicity
+4,Technical or organisational problems
+5,PATIENT choice (stopped or interrupted treatment)

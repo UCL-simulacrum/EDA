@@ -1,0 +1,628 @@
+ZMORPHOLOGYID,SHORTDESC
+8000,Neoplasm
+8001,Tumour cells
+8002,"Malignant tumour, small cell type"
+8003,"Malignant tumour, giant cell type"
+8004,"Malignant tumour, fusiform cell type"
+8010,Epithelial tumour/Carcinoma
+8011,Epithelioma
+8012,Large cell carcinoma
+8020,"Carcinoma, undifferentiated"
+8021,"Carcinoma, anaplastic type"
+8022,Pleomorphic carcinoma
+8030,Giant cell and spindle cell carcinoma
+8031,Giant cell carcinoma
+8032,Spindle cell carcinoma
+8033,Pseudosarcomatous carcinoma
+8034,Polygonal cell carcinoma
+8040,Tumourlet
+8041,Small cell carcinoma
+8042,Oat cell carcinoma
+8043,"Small cell carcinoma, fusiform cell"
+8044,"Small cell carcinoma, intermediate cell"
+8045,Small cell-large cell carcinoma
+8050,Papilloma (except Papilloma of urinary bladder M8120/1)/Papillary carcinoma
+8051,Verrucous papilloma/Verrucous carcinoma
+8052,Squamous cell papilloma/Papillary squamous cell carcinoma
+8053,Inverted papilloma
+8060,Papillomatosis
+8070,Squamous cell carcinoma
+8071,"Squamous cell carcinoma, keratinising"
+8072,"Squamous cell carcinoma, large cell, non-keratinising"
+8073,"Squamous cell carcinoma, small cell, non-keratinising"
+8074,"Squamous cell carcinoma, spindle cell"
+8075,Adenoid squamous cell carcinoma
+8076,"Squamous cell carcinoma with questionable stromal invasion/Squamous cell carcinoma, microinvasive"
+8077,"Intraepithelial neoplasia, grade III, of cervix, vulva and vagina"
+8080,Queyrat's erythroplasia
+8081,Bowen's disease
+8082,Lymphoepithelial carcinoma
+8090,Basal cell tumour/Basal cell carcinoma
+8091,Multicentric basal cell carcinoma
+8092,"Basal cell carcinoma, morphoea"
+8093,"Basal cell carcinoma, fibroepithelial"
+8094,Basosquamous carcinoma
+8095,Metatypical carcinoma
+8096,Intraepidermal epithelioma of Jadassohn
+8100,Trichoepithelioma
+8101,Trichofolliculoma
+8102,Trichilemmoma
+8110,Pilomatrixoma/Pilomatrix carcinoma
+8120,Transitional cell papilloma/Urothelial papilloma/Transitional cell carcinoma
+8121,"Schneiderian papilloma/Transitional cell papilloma, inverted/Schneiderian carcinoma"
+8122,"Transitional cell carcinoma, spindle cell"
+8123,Basaloid carcinoma
+8124,Cloacogenic carcinoma
+8130,Papillary transitional cell carcinoma
+8140,Adenoma/Bronchial adenoma/Adenocarcinoma
+8141,Scirrhous adenocarcinoma
+8142,Linitis plastica
+8143,Superficial spreading adenocarcinoma
+8144,"Adenocarcinoma, intestinal type"
+8145,"Carcinoma, diffuse type"
+8146,Monomorphic adenoma
+8147,Basal cell adenoma/Basal cell adenocarcinoma
+8150,Islet cell adenoma/Islet cell carcinoma
+8151,Insulinoma
+8152,Glucagonoma
+8153,Gastrinoma
+8154,Mixed islet cell and exocrine adenocarcinoma
+8155,Vipoma
+8160,Bile duct adenoma/Cholangiocarcinoma
+8161,Bile duct cystadenoma/Bile duct cystadenocarcinoma
+8162,Klatskin's tumour
+8170,Liver cell adenoma/Hepatocellular carcinoma
+8171,"Hepatocellular carcinoma, fibrolamellar"
+8180,Hepatocholangioma/Combined hepatocellular carcinoma and cholangiocarcinoma
+8190,Trabecular adenoma/Trabecular adenocarcinoma
+8191,Embryonal adenoma
+8200,Eccrine dermal cylindroma/Adenoid cystic carcinoma
+8201,Cribriform carcinoma
+8202,Microcystic adenoma
+8210,Adenomatous polyp/Adenocarcinoma adenomatous polyp
+8211,Tubular adenoma/Tubular adenocarcinoma
+8220,Adenomatous polyposis coli/Adenocarcinoma adenomatous polyposis coli
+8221,Multiple adenomatous polyps/Adenocarcinoma multiple adenomatous polyps
+8230,Solid carcinoma
+8231,Carcinoma simplex
+8240,"Carcinoid tumour NOS, of appendix/Carcinoid tumour (except of appendix M8240/1)"
+8241,"Carcinoid tumour, argentaffin"
+8243,Goblet cell carcinoid
+8244,Composite carcinoid
+8245,Adenocarcinoid tumour
+8246,Neuroendocrine carcinoma
+8247,Merkel cell carcinoma
+8248,Apudoma
+8250,Pulmonary adenomatosis/Bronchiolo-alveolar adenocarcinoma
+8251,Alveolar adenoma/Alveolar adenocarcinoma
+8260,Papillary adenoma/Papillary adenocarcinoma
+8261,Villous adenoma/Adenocarcinoma villous adenoma
+8262,Villous adenocarcinoma
+8263,Tubulovillous adenoma/Adenocarcinoma tubulovillous adenoma
+8270,Chromophobe adenoma/Chromophobe carcinoma
+8271,Prolactinoma
+8280,Acidophil adenoma/Acidophil carcinoma
+8281,Mixed acidophil-basophil adenoma/Mixed acidophil-basophil carcinoma
+8290,Oxyphilic adenoma/Oxyphilic adenocarcinoma
+8300,Basophil adenoma/Basophil carcinoma
+8310,Clear cell adenoma/Clear cell adenocarcinoma
+8311,Hypernephroid tumour
+8312,Renal cell carcinoma
+8313,Clear cell adenofibroma
+8314,Lipid-rich carcinoma
+8315,Glycogen-rich carcinoma
+8320,Granular cell carcinoma
+8321,Chief cell adenoma
+8322,Water-clear cell adenoma/Water-clear cell adenocarcinoma
+8323,Mixed cell adenoma/Mixed cell adenocarcinoma
+8324,Lipoadenoma
+8330,Follicular adenoma/Follicular adenocarcinoma
+8331,"Follicular adenocarcinoma, well differentiated"
+8332,"Follicular adenocarcinoma, trabecular"
+8333,Microfollicular adenoma
+8334,Macrofollicular adenoma
+8340,"Papillary carcinoma, follicular variant"
+8350,Nonencapsulated sclerosing carcinoma
+8360,Multiple endocrine adenomas
+8361,Juxtaglomerular tumour
+8370,Adrenal cortical adenoma/Adrenal cortical carcinoma
+8371,"Adrenal cortical adenoma, compact cell"
+8372,"Adrenal cortical adenoma, heavily pigmented variant"
+8373,"Adrenal cortical adenoma, clear cell"
+8374,"Adrenal cortical adenoma, glomerulosa cell"
+8375,"Adrenal cortical adenoma, mixed cell"
+8380,Endometrioid adenoma/Endometrioid carcinoma
+8381,Endometrioid adenofibroma
+8390,Skin appendage adenoma/Skin appendage carcinoma
+8400,Sweat gland adenoma/Sweat gland tumour/Sweat gland adenocarcinoma
+8401,Apocrine adenoma/Apocrine adenocarcinoma
+8402,Eccrine acrospiroma
+8403,Eccrine spiradenoma
+8404,Hidrocystoma
+8405,Papillary hydradenoma
+8406,Papillary syringadenoma
+8407,Syringoma
+8408,Eccrine papillary adenoma
+8410,Sebaceous adenoma/Sebaceous adenocarcinoma
+8420,Ceruminous adenoma/Ceruminous adenocarcinoma
+8430,Mucoepidermoid tumour/Mucoepidermoid carcinoma
+8440,Cystadenoma/Cystadenocarcinoma
+8441,Serous cystadenoma/Serous cystadenocarcinoma
+8442,Serous cystadenoma
+8450,Papillary cystadenoma/Papillary cystadenocarcinoma
+8451,Papillary cystadenoma
+8452,Papillary cystic tumour
+8460,Papillary serous cystadenoma/Papillary serous cystadenocarcinoma
+8461,Serous surface papilloma/Serous surface papillary carcinoma
+8462,Papillary serous cystadenoma
+8470,Mucinous cystadenoma/Mucinous cystadenocarcinoma
+8471,Papillary mucinous cystadenoma/Papillary mucinous cystadenocarcinoma
+8472,Mucinous cystadenoma
+8473,Papillary mucinous cystadenoma
+8480,Mucinous adenoma/Mucinous adenocarcinoma/Pseudomyxoma peritonei
+8481,Mucin-producing adenocarcinoma
+8490,Signet ring cell carcinoma/Metastatic signet ring cell carcinoma
+8500,"Intraductal carcinoma, noninfiltrating/Infiltrating duct carcinoma"
+8501,"Comedocarcinoma, noninfiltrating/Comedocarcinoma"
+8502,Juvenile carcinoma of the breast
+8503,Intraductal papilloma/Noninfiltrating intraductal papillary adenocarcinoma/Intraductal papillary adenocarcinoma with invasion
+8504,Intracystic papillary adenoma/Noninfiltrating intracystic carcinoma/Intracystic carcinoma
+8505,Intraductal papillomatosis
+8506,Adenoma of nipple
+8510,Medullary carcinoma
+8511,Medullary carcinoma with amyloid stroma
+8512,Medullary carcinoma with lymphoid stroma
+8520,Lobular carcinoma
+8521,Infiltrating ductular carcinoma
+8522,Intraductal carcinoma and lobular carcinoma/Infiltrating duct and lobular carcinoma
+8530,Inflammatory carcinoma
+8540,"Paget's disease, mammary"
+8541,Paget's disease and infiltrating duct carcinoma of breast
+8542,"Paget's disease, extramammary (except Paget's disease of bone)"
+8543,Paget's disease and intraductal carcinoma of breast
+8550,Acinar cell adenoma/Acinar cell tumour/Acinar cell carcinoma
+8560,Adenosquamous carcinoma
+8561,Adenolymphoma
+8562,Epithelial-myoepithelial carcinoma
+8570,Adenocarcinoma with squamous metaplasia
+8571,Adenocarcinoma with cartilaginous and osseous metaplasia
+8572,Adenocarcinoma with spindle cell metaplasia
+8573,Adenocarcinoma with apocrine metaplasia
+8580,Thymoma
+8590,Sex cord-stromal tumour
+8600,Thecoma
+8601,"Thecoma, luteinised"
+8602,Sclerosing stromal tumour
+8610,Luteoma
+8620,Granulosa cell tumour
+8621,Granulosa cell-theca cell tumour
+8622,Juvenile granulosa cell tumour
+8623,Sex cord tumour with annular tubules
+8630,Androblastoma
+8631,Sertoli-Leydig cell tumour
+8632,Gynandroblastoma
+8640,Sertoli cell tumour/Sertoli cell carcinoma
+8641,Sertoli cell tumour with lipid storage
+8650,Leydig cell tumour
+8660,Hilar cell tumour
+8670,Lipid cell tumour of ovary
+8671,Adrenal rest tumour
+8680,Paraganglioma
+8681,Sympathetic paraganglioma
+8682,Parasympathetic paraganglioma
+8683,Gangliocytic paraganglioma
+8690,Glomus jugulare tumour
+8691,Aortic body tumour
+8692,Carotid body tumour
+8693,Extra-adrenal paraganglioma
+8700,Phaeochromocytoma
+8710,Glomangiosarcoma
+8711,Glomus tumour
+8712,Glomangioma
+8713,Glomangiomyoma
+8720,Pigmented naevus/Melanoma/Malignant melanoma
+8721,Nodular melanoma
+8722,Balloon cell naevus/Balloon cell melanoma
+8723,"Halo naevus/Malignant melanoma, regressing"
+8724,Fibrous papule of nose
+8725,Neuronaevus
+8726,Magnocellular naevus
+8727,Dysplastic naevus
+8730,Nonpigmented naevus/Amelanotic melanoma
+8740,Junctional naevus/Malignant melanoma junctional naevus
+8741,Precancerous melanosis/Malignant melanoma precancerous melanosis
+8742,Hutchinson's melanotic freckle/Malignant melanoma Hutchinson's melanotic freckle
+8743,Superficial spreading melanoma
+8744,Acral lentiginous melanoma
+8745,Desmoplastic melanoma
+8750,Intradermal naevus
+8760,Compound naevus
+8761,Giant pigmented naevus/Malignant melanoma giant pigmented naevus
+8770,Epithelioid and spindle cell naevus/Mixed epithelioid and spindle cell melanoma
+8771,Epithelioid cell melanoma
+8772,Spindle cell naevus/Spindle cell melanoma
+8773,"Spindle cell melanoma, type A"
+8774,"Spindle cell melanoma, type B"
+8780,Blue naevus
+8790,Cellular blue naevus
+8800,Soft tissue tumour/Sarcoma/Sarcomatosis
+8801,Spindle cell sarcoma
+8802,Giant cell sarcoma (except of bone M9250/3)
+8803,Small cell sarcoma
+8804,Epithelioid sarcoma
+8810,Fibroma/Fibrosarcoma
+8811,Fibromyxoma/Fibromyxosarcoma
+8812,Periosteal fibroma/Periosteal fibrosarcoma
+8813,Fascial fibroma/Fascial fibrosarcoma
+8814,Infantile fibrosarcoma
+8820,Elastofibroma
+8821,Aggressive fibromatosis
+8822,Abdominal fibromatosis
+8823,Desmoplastic fibroma
+8824,Myofibromatosis
+8830,Fibrous histiocytoma/Atypical fibrous histiocytoma
+8832,Dermatofibroma/Dermatofibrosarcoma
+8833,Pigmented dermatofibrosarcoma protuberans
+8840,Myxoma/Myxosarcoma
+8841,Angiomyxoma
+8850,Lipoma/Liposarcoma
+8851,"Fibrolipoma/Liposarcoma, well differentiated"
+8852,Fibromyxolipoma/Myxoid liposarcoma
+8853,Round cell liposarcoma
+8854,Pleomorphic lipoma/Pleomorphic liposarcoma
+8855,Mixed type liposarcoma
+8856,Intramuscular lipoma
+8857,Spindle cell lipoma
+8858,Dedifferentiated liposarcoma
+8860,Angiomyolipoma
+8861,Angiolipoma
+8870,Myelolipoma
+8880,Hibernoma
+8881,Lipoblastomatosis
+8890,Leiomyoma/Leiomyomatosis/Leiomyosarcoma
+8891,Epithelioid leiomyoma/Epithelioid leiomyosarcoma
+8892,Cellular leiomyoma
+8893,Bizarre leiomyoma
+8894,Angiomyoma/Angiomyosarcoma
+8895,Myoma/Myosarcoma
+8896,Myxoid leiomyosarcoma
+8897,Smooth muscle tumour
+8900,Rhabdomyoma/Rhabdomyosarcoma
+8901,Pleomorphic rhabdomyosarcoma
+8902,Mixed type rhabdomyosarcoma
+8903,Foetal rhabdomyoma
+8904,Adult rhabdomyoma
+8910,Embryonal rhabdomyosarcoma
+8920,Alveolar rhabdomyosarcoma
+8930,Endometrial stromal nodule/Endometrial stromal sarcoma
+8931,Endolymphatic stromal myosis
+8932,Adenomyoma
+8933,Adenosarcoma
+8940,Pleomorphic adenoma/Mixed tumour
+8941,Carcinoma pleomorphic adenoma
+8950,Müllerian mixed tumour
+8951,Mesodermal mixed tumour
+8960,Mesoblastic nephroma/Nephroblastoma
+8963,Rhabdoid sarcoma
+8964,Clear cell sarcoma of kidney
+8970,Hepatoblastoma
+8971,Pancreatoblastoma
+8972,Pulmonary blastoma
+8980,Carcinosarcoma
+8981,"Carcinosarcoma, embryonal"
+8982,Myoepithelioma
+8990,Mesenchymoma
+8991,Embryonal sarcoma
+9000,Brenner tumour
+9010,Fibroadenoma
+9011,Intracanalicular fibroadenoma
+9012,Pericanalicular fibroadenoma
+9013,Adenofibroma
+9014,Serous adenofibroma
+9015,Mucinous adenofibroma
+9016,Giant fibroadenoma
+9020,Phyllodes tumour
+9030,Juvenile fibroadenoma
+9040,Synovioma/Synovial sarcoma
+9041,"Synovial sarcoma, spindle cell"
+9042,"Synovial sarcoma, epithelioid cell"
+9043,"Synovial sarcoma, biphasic"
+9044,Clear cell sarcoma (except of kidney M8964/3)
+9050,Mesothelioma
+9051,Fibrous mesothelioma
+9052,Epithelioid mesothelioma
+9053,"Mesothelioma, biphasic"
+9054,Adenomatoid tumour
+9055,Cystic mesothelioma
+9060,Dysgerminoma
+9061,Seminoma
+9062,"Seminoma, anaplastic"
+9063,Spermatocytic seminoma
+9064,Germinoma
+9070,Embryonal carcinoma
+9071,Endodermal sinus tumour
+9072,Polyembryoma
+9073,Gonadoblastoma
+9080,Teratoma
+9081,Teratocarcinoma
+9082,"Malignant teratoma, undifferentiated"
+9083,"Malignant teratoma, intermediate"
+9084,Dermoid cyst/Dermoid cyst with transformation
+9085,Mixed germ cell tumour
+9090,Struma ovarii
+9091,Strumal carcinoid
+9100,Hydatidiform mole/Invasive hydatidiform mole/Choriocarcinoma
+9101,Choriocarcinoma combined with other germ cell elements
+9102,"Malignant teratoma, trophoblastic"
+9103,Partial hydatidiform mole
+9104,Placental site trophoblastic tumour
+9110,Mesonephroma/Mesonephric tumour
+9120,Haemangioma/Haemangiosarcoma
+9121,Cavernous haemangioma
+9122,Venous haemangioma
+9123,Racemose haemangioma
+9124,Kupffer cell sarcoma
+9125,Epithelioid haemangioma
+9126,Histiocytoid haemangioma
+9130,Haemangioendothelioma
+9131,Capillary haemangioma
+9132,Intramuscular haemangioma
+9133,Epithelioid haemangioendothelioma
+9134,Intravascular bronchial alveolar tumour
+9140,Kaposi's sarcoma
+9141,Angiokeratoma
+9142,Verrucous keratotic haemangioma
+9150,Haemangiopericytoma
+9160,Angiofibroma
+9161,Haemangioblastoma
+9170,Lymphangioma/Lymphangiosarcoma
+9171,Capillary lymphangioma
+9172,Cavernous lymphangioma
+9173,Cystic lymphangioma
+9174,Lymphangiomyoma/Lymphangiomyomatosis
+9175,Haemolymphangioma
+9180,Osteoma/Osteosarcoma
+9181,Chondroblastic osteosarcoma
+9182,Fibroblastic osteosarcoma
+9183,Telangiectatic osteosarcoma
+9184,Osteosarcoma Paget's disease of bone
+9185,Small cell osteosarcoma
+9190,Juxtacortical osteosarcoma
+9191,Osteoid osteoma
+9200,Osteoblastoma/Aggressive osteoblastoma
+9210,Osteochondroma/Osteochondromatosis
+9220,Chondroma/Chondromatosis/Chondrosarcoma
+9221,Juxtacortical chondroma/Juxtacortical chondrosarcoma
+9230,Chondroblastoma
+9231,Myxoid chondrosarcoma
+9240,Mesenchymal chondrosarcoma
+9241,Chondromyxoid fibroma
+9250,Giant cell tumour of bone
+9251,Giant cell tumour of soft parts/Malignant giant cell tumour of soft parts
+9260,Ewing's sarcoma
+9261,Adamantinoma of long bones
+9262,Ossifying fibroma
+9270,Odontogenic tumour
+9271,Dentinoma
+9272,Cementoma
+9273,Cementoblastoma
+9274,Cementifying fibroma
+9275,Gigantiform cementoma
+9280,Odontoma
+9281,Compound odontoma
+9282,Complex odontoma
+9290,Ameloblastic fibro-odontoma/Ameloblastic odontosarcoma
+9300,Adenomatoid odontogenic tumour
+9301,Calcifying odontogenic cyst
+9302,Odontogenic ghost cell tumour
+9310,Ameloblastoma
+9311,Odontoameloblastoma
+9312,Squamous odontogenic tumour
+9320,Odontogenic myxoma
+9321,Central odontogenic fibroma
+9322,Peripheral odontogenic fibroma
+9330,Ameloblastic fibroma/Ameloblastic fibrosarcoma
+9340,Calcifying epithelial odontogenic tumour
+9350,Craniopharyngioma
+9360,Pinealoma
+9361,Pineocytoma
+9362,Pineoblastoma
+9363,Melanotic neuroectodermal tumour
+9364,Peripheral neuroectodermal tumour
+9370,Chordoma
+9380,Glioma
+9381,Gliomatosis cerebri
+9382,Mixed glioma
+9383,Subependymal glioma
+9384,Subependymal giant cell astrocytoma
+9390,Choroid plexus papilloma
+9391,Ependymoma
+9392,"Ependymoma, anaplastic"
+9393,Papillary ependymoma
+9394,Myxopapillary ependymoma
+9400,Astrocytoma
+9401,"Astrocytoma, anaplastic"
+9410,Protoplasmic astrocytoma
+9411,Gemistocytic astrocytoma
+9420,Fibrillary astrocytoma
+9421,Pilocytic astrocytoma
+9422,Spongioblastoma
+9423,Spongioblastoma polare
+9424,Pleomorphic xanthroastrocytoma
+9430,Astroblastoma
+9440,Glioblastoma
+9441,Giant cell glioblastoma
+9442,Gliosarcoma
+9443,Primitive polar spongioblastoma
+9450,Oligodendroglioma
+9451,"Oligodendroglioma, anaplastic"
+9460,Oligodendroblastoma
+9470,Medulloblastoma
+9471,Desmoplastic medulloblastoma
+9472,Medullomyoblastoma
+9473,Primitive neuroectodermal tumour
+9480,Cerebellar sarcoma
+9481,Monstrocellular sarcoma
+9490,Ganglioneuroma/Ganglioneuroblastoma
+9491,Ganglioneuromatosis
+9500,Neuroblastoma
+9501,Medulloepithelioma
+9502,Teratoid medulloepithelioma
+9503,Neuroepithelioma
+9504,Spongioneuroblastoma
+9505,Ganglioglioma
+9506,Neurocytoma
+9507,Pacinian tumour
+9510,Retinoblastoma
+9511,"Retinoblastoma, differentiated"
+9512,"Retinoblastoma, undifferentiated"
+9520,Olfactory neurogenic tumour
+9521,Esthesioneurocytoma
+9522,Esthesioneuroblastoma
+9523,Esthesioneuroepithelioma
+9530,Meningioma/Meningiomatosis
+9531,Meningotheliomatous meningioma
+9532,Fibrous meningioma
+9533,Psammomatous meningioma
+9534,Angiomatous meningioma
+9535,Haemangioblastic meningioma
+9536,Haemangiopericytic meningioma
+9537,Transitional meningioma
+9538,Papillary meningioma
+9539,Meningeal sarcomatosis
+9540,Neurofibroma/Neurofibromatosis/Neurofibrosarcoma
+9541,Melanotic neurofibroma
+9550,Plexiform neurofibroma
+9560,Neurilemmoma/Neurinomatosis
+9561,Triton tumour
+9562,Neurothekeoma
+9570,Neuroma
+9580,Granular cell tumour
+9581,Alveolar soft part sarcoma
+9590,Malignant lymphoma
+9591,"Malignant lymphoma, non-Hodgkin's"
+9592,Lymphosarcoma
+9593,Reticulosarcoma
+9594,Microglioma
+9595,"Malignant lymphoma, diffuse"
+9650,Hodgkin's disease
+9652,"Hodgkin's disease, mixed cellularity"
+9653,"Hodgkin's disease, lymphocytic depletion"
+9654,"Hodgkin's disease, lymphocytic depletion, diffuse fibrosis"
+9655,"Hodgkin's disease, lymphocytic depletion, reticular"
+9657,"Hodgkin's disease, lymphocytic predominance"
+9658,"Hodgkin's disease, lymphocytic predominance, diffuse"
+9659,"Hodgkin's disease, lymphocytic predominance, nodular"
+9660,Hodgkin's paragranuloma
+9661,Hodgkin's granuloma
+9662,Hodgkin's sarcoma
+9663,"Hodgkin's disease, nodular sclerosis"
+9664,"Hodgkin's disease, nodular sclerosis, cellular phase"
+9665,"Hodgkin's disease, nodular sclerosis, lymphocytic predominance"
+9666,"Hodgkin's disease, nodular sclerosis, mixed cellularity"
+9667,"Hodgkin's disease, nodular sclerosis, lymphocytic depletion"
+9670,"Malignant lymphoma, small lymphocytic"
+9671,"Malignant lymphoma, lymphoplasmacytic"
+9672,"Malignant lymphoma, small cleaved cell, diffuse"
+9673,"Malignant lymphoma, lymphocytic, intermediate differentiation, diffuse"
+9674,"Malignant lymphoma, centrocytic"
+9675,"Malignant lymphoma, mixed small and large cell, diffuse"
+9676,"Malignant lymphoma, centroblastic-centrocytic, diffuse"
+9677,Malignant lymphomamatous polyposis
+9680,"Malignant lymphoma, large cell, diffuse"
+9681,"Malignant lymphoma, large cell, cleaved, diffuse"
+9682,"Malignant lymphoma, large cell, noncleaved, diffuse"
+9683,"Malignant lymphoma, centroblastic, diffuse"
+9684,"Malignant lymphoma, immunoblastic"
+9685,"Malignant lymphoma, lymphoblastic"
+9686,"Malignant lymphoma, small cell, noncleaved, diffuse"
+9687,Burkitt's lymphoma
+9690,"Malignant lymphoma, follicular"
+9691,"Malignant lymphoma, mixed small cleaved and large cell, follicular"
+9692,"Malignant lymphoma, centroblastic-centrocytic, follicular"
+9693,"Malignant lymphoma, lymphocytic, well differentiated, nodular"
+9694,"Malignant lymphoma, lymphocytic, intermediate differentiation, nodular"
+9695,"Malignant lymphoma, small cleaved cell, follicular"
+9696,"Malignant lymphoma, lymphocytic, poorly differentiated, nodular"
+9697,"Malignant lymphoma, centroblastic, follicular"
+9698,"Malignant lymphoma, large cell, follicular"
+9700,Mycosis fungoides
+9701,Sézary's disease
+9702,Peripheral T-cell lymphoma
+9703,T-zone lymphoma
+9704,Lymphoepithelioid lymphoma
+9705,"Peripheral T-cell lymphoma, AILD (angioimmunoblastic lymphadenopathy with dysproteinaemia)"
+9706,"Peripheral T-cell lymphoma, pleomorphic small cell"
+9707,"Peripheral T-cell lymphoma, pleomorphic medium and large cell"
+9709,Cutaneous lymphoma
+9711,Monocytoid B-cell lymphoma
+9712,Angioendotheliomatosis
+9713,Angiocentric T-cell lymphoma
+9714,Large cell (Ki-1+) lymphoma
+9720,Malignant histiocytosis
+9722,Letterer-Siwe disease
+9723,True histiocytic lymphoma
+9731,Plasmacytoma
+9732,Multiple myeloma
+9740,Mastocytoma/Mast cell sarcoma
+9741,Malignant mastocytosis
+9760,Immunoproliferative disease
+9761,Waldenström's macroglobulinaemia
+9762,Alpha heavy chain disease
+9763,Gamma heavy chain disease
+9764,Immunoproliferative small intestinal disease
+9765,Monoclonal gammopathy
+9766,Angiocentric immunoproliferative lesion
+9767,Angioimmunoblastic lymphadenopathy
+9768,T-gamma lymphoproliferative disease
+9800,Leukaemia
+9801,Acute leukaemia
+9802,Subacute leukaemia
+9803,Chronic leukaemia
+9804,Aleukaemic leukaemia
+9820,Lymphoid leukaemia
+9821,Acute lymphoblastic leukaemia
+9822,Subacute lymphoid leukaemia
+9823,Chronic lymphocytic leukaemia
+9824,Aleukaemic lymphoid leukaemia
+9825,Prolymphocytic leukaemia
+9826,Burkitt's cell leukaemia
+9827,Adult T-cell leukaemia/lymphoma
+9830,Plasma cell leukaemia
+9840,Erythroleukaemia
+9841,Acute erythraemia
+9842,Chronic erythraemia
+9850,Lymphosarcoma cell leukaemia
+9860,Myeloid leukaemia
+9861,Acute myeloid leukaemia
+9862,Subacute myeloid leukaemia
+9863,Chronic myeloid leukaemia
+9864,Aleukaemic myeloid leukaemia
+9866,Acute promyelocytic leukaemia
+9867,Acute myelomonocytic leukaemia
+9868,Chronic myelomonocytic leukaemia
+9870,Basophilic leukaemia
+9880,Eosinophilic leukaemia
+9890,Monocytic leukaemia
+9891,Acute monocytic leukaemia
+9892,Subacute monocytic leukaemia
+9893,Chronic monocytic leukaemia
+9894,Aleukaemic monocytic leukaemia
+9900,Mast cell leukaemia
+9910,Acute megakaryoblastic leukaemia
+9930,Myeloid sarcoma
+9931,Acute panmyelosis
+9932,Acute myelofibrosis
+9940,Hairy cell leukaemia
+9941,Leukaemic reticuloendotheliosis
+9950,Polycythaemia vera
+9960,Chronic myeloproliferative disease
+9961,Myelosclerosis with myeloid metaplasia
+9962,Idiopathic thrombocythaemia
+9970,Lymphoproliferative disease
+9980,Refractory anaemia
+9981,Refractory anaemia without sideroblasts
+9982,Refractory anaemia with sideroblasts
+9983,Refractory anaemia with excess of blasts
+9984,Refractory anaemia with excess of blasts with transformation
+9989,Myelodysplastic syndrome NO

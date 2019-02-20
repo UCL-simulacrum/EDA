@@ -1,0 +1,4 @@
+ZVITALSTATUSID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"A","Alive",null,"A",null,null,1
+"D","Dead",null,"D",null,null,2
+"X","Exit Posting",null,"X",null,null,3

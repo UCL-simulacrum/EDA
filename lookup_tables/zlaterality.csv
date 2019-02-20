@@ -1,0 +1,8 @@
+ZLATERALITYID,SHORTDESC,DESCRIPTION,EXPORTID,STARTDATE,ENDDATE,SORT
+"8","NOT APPLICABLE",null,"8",null,null,5
+"9","X NOT KNOWN",null,"9",null,null,6
+"B","BILATERAL",null,"B",null,null,4
+"L","LEFT",null,"L",null,null,1
+"M","MIDLINE",null,"M",null,null,3
+"R","RIGHT",null,"R",null,null,2
+"Z","Z","Outdated or invalid code Z","Z",null,null,-1
