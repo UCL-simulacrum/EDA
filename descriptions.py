@@ -121,6 +121,7 @@ def add_descriptions(table,
         }
     }
     
+    table_name = table_name.lower()
     try:
         zlookup_dict = zlookup_dicts[table_name]
     except KeyError:
