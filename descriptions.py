@@ -239,7 +239,7 @@ def load_zlookup_table(table_name,
         table = pd.read_csv(read_path, quotechar='"', dtype=object
                            ).set_index("Z"+table_name.upper()+"ID", drop=True)
     except FileNotFoundError:
-        raise ValueError("The file " + read_path + " does not exist. See setup.ipynb")
+        raise ValueError("The file " + read_path + " does not exist.")
     return table
 
 
