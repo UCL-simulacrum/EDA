@@ -29,7 +29,9 @@ zlookup_table_names = [
     'grade',
     'histologylookup',
     'icd',
+    'icd3char',
     'icdclassification',
+    'icdfull',
     'laterality',
     'morphology',
     'performance',
@@ -54,8 +56,9 @@ def add_descriptions(table,
     Pass the table and which table it is (e.g. 'av_patient')
     to add all available descriptions to the table.  
     
-    Alternatively set columns argument to be only the columns 
-    you want descriptions of.
+    Alternatively, to save time, set columns argument to be only the columns 
+    you want descriptions of. (In particular, the deathcausecode columns in 
+    av_patient take a long time to run)
     
     If you need something more general use:
       
@@ -69,11 +72,16 @@ def add_descriptions(table,
             "SEX":"SEX",
             "ETHNICITY":"ETHNICITY",
             "DEATHLOCATIONCODE":"DEATHLOCATION",
+            "DEATHCAUSECODE_1A":"DEATHCAUSE",              
+            "DEATHCAUSECODE_1B":"DEATHCAUSE",              
+            "DEATHCAUSECODE_1C":"DEATHCAUSE",
+            "DEATHCAUSECODE_2":"DEATHCAUSE",
+            "DEATHCAUSECODE_UNDERLYING":"DEATHCAUSE",
             "NEWVITALSTATUS":"VITALSTATUS"
         },
         'av_tumour':  {
-            "SITE_ICD10_O2":"ICD",
-            "SITE_ICD10_O2_3CHAR":"ICD",
+            "SITE_ICD10_O2":"ICDFULL",
+            "SITE_ICD10_O2_3CHAR":"ICD3CHAR",
             "MORPH_ICD10_O2":"MORPHOLOGY",
             "BEHAVIOUR_ICD10_O2":"BEHAVIOUR",
             "STAGE_BEST":"STAGE",
@@ -95,8 +103,8 @@ def add_descriptions(table,
         },
         'sact_tumour': {
             "CONSULTANT_SPECIALITY_CODE":"CONSULTANTSPECIALITY",
-            "PRIMARY_DIAGNOSIS":"ICD",
-            "MORPHOLOGY_CLEAN":"HISTOLOGYLOOKUP"
+            "PRIMARY_DIAGNOSIS":"ICDFULL",
+            "MORPHOLOGY_CLEAN":"HISTOLOGY"
         },
         'sact_regimen': {
             "INTENT_OF_TREATMENT":"REGIMENINTENT",
@@ -150,20 +158,25 @@ def get_descriptions(codes, zlookup, folder=default_folder, prefix=default_prefi
     """
     Pass a list or pandas series of codes and the zlookup table to translate them with.
     
+    Accepts as special cases histology and deathcause as redirects to 
+    get_histology_description_1 and get_deathcause_description
+    
     Returns the translated values (does not modify in place).
     """
+    
+    if zlookup.lower()=='histology':
+        return get_histology_description_1(codes, folder, prefix)
+    if zlookup.lower()=='deathcause':
+        return get_deathcause_description(codes, folder, prefix)
     
     #check inputs are valid
     if zlookup.lower()=='icdclassification':
         raise ValueError("this function won't work for icdclassification. did you want icd?")
     if not zlookup.lower() in zlookup_table_names:
         raise ValueError("zlookup must be in " + str(zlookup_table_names))
-        
-    if zlookup.lower()=='histologylookup':
-        return get_histology_description_1(codes, folder, prefix)
-    else:    
-        zlookup_table = load_zlookup_table(zlookup, folder, prefix)
-        return pd.Series(codes).map(zlookup_table["SHORTDESC"])
+          
+    zlookup_table = load_zlookup_table(zlookup, folder, prefix)
+    return pd.Series(codes).map(zlookup_table["SHORTDESC"])
 
     
     
@@ -183,8 +196,6 @@ def get_histology_description_2(morphology, behaviour, folder=default_folder, pr
                       how='left')
     return merged["DESCRIPTION"]
 
-
-
 def get_histology_description_1(codes, folder=default_folder, prefix=default_prefix):
      
     """
@@ -196,6 +207,24 @@ def get_histology_description_1(codes, folder=default_folder, prefix=default_pre
     morphology = codes.str[:4]
     behaviour = codes.str[4:]
     return get_histology_description_2(morphology, behaviour, folder, prefix)
+
+def get_deathcause_description(codes, folder=default_folder, prefix=default_prefix):
+     
+    """
+    Accepts a list or pandas series where each element contains 0, 1, or many
+    ICD10 codes, separated by commas.
+    
+    Returns a pandas series of descriptions separated by semicolons.
+    """
+    codes = pd.Series(codes)
+    expanded = codes.str.split(',', expand=True)
+    translated = pd.DataFrame()
+    for col in expanded.columns:
+        translated[col] = get_descriptions(expanded[col], 'icdfull')
+    empty = pd.Series(index=codes.index, dtype=object)
+    contracted = empty.str.cat(translated, sep=';', na_rep='').str.strip(';')    
+    return contracted
+
 
 
 def load_zlookup_table(table_name,
@@ -223,7 +252,7 @@ def make_zlookup_csvs_from_sql(read_folder="simulacrum_release_v1.1.0",
     """
     simulacrum_release_v1.1.0 doesn't come with lookup tables.
     This code converts the sql files to create them to csv lookup tables.
-    The csv files are included in the github now so you won't need to.
+    The results are included in the github now so you don't need to run it.
     So are some others, mostly taken from https://www.datadictionary.nhs.uk/
     """
     
@@ -262,9 +291,7 @@ def make_zlookup_csvs_from_sql(read_folder="simulacrum_release_v1.1.0",
         csv = csv.translate(str.maketrans("'", '"'))
         with open(write_path, "w") as write_file:
             write_file.write(csv)
-
-            
-            
+                        
 def make_zlookup_morphology(read_folder="", read_filename="morph.txt",
                             write_folder=default_folder, write_prefix=default_prefix):
     
@@ -306,3 +333,50 @@ def make_zlookup_morphology(read_folder="", read_filename="morph.txt",
     zmorph = morphdf.groupby("ZMORPHOLOGYID")["SHORTDESC"].unique().map(lambda x: '/'.join(x))
     pd.DataFrame(zmorph).to_csv(write_path)
     
+def make_zlookup_icd(read_folder="", read_filename="cod.txt",
+                            write_folder=default_folder, write_prefix=default_prefix):
+    
+    """
+    Full icd10 lookup table was generated using this code from 
+    a lookup table at http://www.wolfbane.com/icd/icd10h.htm.
+    zicd didn't have all the codes.
+    The results are included in this github so you don't need to run it.
+    """
+    
+    read_path = os.path.join(read_folder, read_filename) 
+    write_path_full = os.path.join(write_folder, write_prefix + "icdfull.csv")
+    write_path_3char = os.path.join(write_folder, write_prefix + "icd3char.csv")
+    broad_cat, broad_desc, code, desc, code_3char, desc_3char, code_just_3char, desc_just_3char = [], [], [], [], [], [], [], []
+    current_broad_cat, current_broad_desc, current_code_3char, current_desc_3char = "", "", "", ""
+    with open(read_path, "r") as read_file:
+        for linenum, line in enumerate(read_file):
+            words = line.split()
+            if words[0][0]=='(':
+                current_broad_cat = line[1:line.index(')')]
+                current_broad_desc = line[line.index(')')+2:]
+            else:
+                broad_cat.append(current_broad_cat)
+                broad_desc.append(current_broad_desc)
+                if len(words[0])==3:
+                    current_code_3char = words[0]
+                    current_desc_3char = ' '.join(words[1:])
+                    code_just_3char.append(current_code_3char)
+                    desc_just_3char.append(current_desc_3char)
+                    code.append(words[0])
+                else:
+                    code.append(words[0][:3] + words[0][4])
+                desc.append(' '.join(words[1:]))
+                code_3char.append(current_code_3char)
+                desc_3char.append(current_desc_3char)
+    df_dict = {'ICD_GROUP':broad_cat,
+               'ICD_GROUP_DESC':broad_desc,
+               'ZICD3CHARID':code_3char,
+               'ICD3CHAR_DESC':desc_3char,
+               'ZICDFULLID':code,
+               'SHORTDESC':desc}
+    df_dict_3char = {'ZICD3CHARID':code_just_3char,
+                     'SHORTDESC':desc_just_3char}
+    icddf = pd.DataFrame(df_dict)
+    icddf3char = pd.DataFrame(df_dict_3char)
+    icddf.set_index('ZICDFULLID').to_csv(write_path_full)
+    icddf3char.set_index('ZICD3CHARID').to_csv(write_path_3char)
