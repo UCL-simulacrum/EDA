@@ -4,3 +4,10 @@ N,Neoadjuvant
 C,Curative
 P,Palliative
 D,Disease Modification
+S,Staging
+1,Curative
+2,Palliative
+3,Disease Modification (specific to drug treatment)
+4,Diagnostic (specific to surgery)
+5,Staging (specific to surgery)
+9,Other (not listed)
