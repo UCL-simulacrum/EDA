@@ -4,3 +4,16 @@ ZPERFORMANCEID,SHORTDESC
 2,"Able to walk and capable of all self care, but unable to carry out any work. Up and about more than 50% of waking hours"
 3,"Capable of only limited self care, confined to bed or chair more than 50% of waking hours"
 4,Completely disabled. Cannot carry on any self care. Totally confined to bed or chair
+9,Not Recorded
+00,"100% = Fully active, normal"
+01,"90% = Minor restrictions in physically strenuous activity"
+02,"80% = Active, but tires more quickly"
+03,"70% = Both greater restriction of, and less time spent in, play activities"
+04,"60% = Up and around, but minimal active play; keeps busy with quieter activities"
+05,"50% = Gets dressed but lies around much of the day; no active play; able to participate in all quiet play and activities"
+06,"40% = Mostly in bed; participates in quiet activities"
+07,"30% = In bed; needs assistance even for quiet play"
+08,"20% = Often sleeping; play entirely limited to very passive activities"
+09,"10% = No play; does not get out of bed"
+10,"5% = Unresponsive"
+11,"0% = Dead"
