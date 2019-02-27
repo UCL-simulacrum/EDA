@@ -204,7 +204,7 @@ def get_histology_description_1(codes, folder=default_folder, prefix=default_pre
     containing morphology and behaviour combined.
     """
     
-    codes = pd.Series(codes)
+    codes = pd.Series(codes).astype(str)
     morphology = codes.str[:4]
     behaviour = codes.str[4:]
     return get_histology_description_2(morphology, behaviour, folder, prefix)
@@ -217,7 +217,7 @@ def get_deathcause_description(codes, folder=default_folder, prefix=default_pref
     
     Returns a pandas series of descriptions separated by semicolons.
     """
-    codes = pd.Series(codes)
+    codes = pd.Series(codes).astype(str)
     expanded = codes.str.split(',', expand=True)
     translated = pd.DataFrame()
     for col in expanded.columns:
