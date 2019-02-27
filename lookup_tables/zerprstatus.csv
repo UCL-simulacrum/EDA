@@ -1,4 +1,6 @@
-﻿ZERPRSTATUSID,SHORTDESC
+ZERPRSTATUSID,SHORTDESC
 N,Negative
 P,Positive
 X,Not performed
+B,Borderline
+U,Unknown
