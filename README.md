@@ -10,7 +10,7 @@ conda install -c conda-forge missingno
 
 # Viewing the notebook
 
-It's better to view it on nbviewer: 
+pyplot doesn't seem to render on github, so view the notebook here:
 
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
 
