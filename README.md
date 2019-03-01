@@ -5,7 +5,7 @@
 ```
 conda install -c anaconda pandas 
 conda install -c plotly plotly 
-pip install missingno
+conda install -c conda-forge missingno
 ```
 
 # Viewing the notebook
