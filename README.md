@@ -3,7 +3,9 @@
 # Specification of conda environment
 
 ```
-conda command here to create correct environment for project
+conda install -c anaconda pandas 
+conda install -c plotly plotly 
+pip install missingno
 ```
 
 # Viewing the notebook
