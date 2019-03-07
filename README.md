@@ -1,5 +1,15 @@
 # EDA
 
+# Viewing the notebook
+
+plotly doesn't seem to render on github, so view the notebook here:
+
+cancerdata_EDA.ipynb:
+https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
+
+patientpathways.ipynb:
+https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
+
 # Specification of conda environment
 
 After installation of Anaconda, at your terminal command prompt, first check conda is up to date:
@@ -22,12 +32,6 @@ After you have navigated to the EDA folder, you can start Jupyter by simply
 ```
 jupyter notebook
 ```
-
-# Viewing the notebook
-
-plotly doesn't seem to render on github, so view the notebook here:
-
-https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
 
 # Hello, is it me you're looking for?
 
