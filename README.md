@@ -10,40 +10,52 @@ https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_ED
 patientpathways.ipynb:
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
 
-# Specification of conda environment
+# Running the Code Locally
 
-After installation of Anaconda, at your terminal command prompt, first check conda is up to date:
+#### Setting up the repository
+
+* Create a directory which will hold your simulacrum project and navigate to it.  
+
+```bash
+mkdir simulacrum
+cd simulacrum
 ```
+
+* Download and unzip the simulacrum dataset.
+```
+wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
+unzip simulacrum_release_v1.1.0.zip
+```
+* Clone the EDA repository
+
+```bash
+git clone git@github.com:UCL-simulacrum/EDA.git
+```
+
+#### Creating a conda environment
+This will create a conda development environment with all the dependencies loaded.
+
+* Update conda and append conda-forge (missingno is not available through default search channel)
+
+```bash
 conda update conda
-```
-Append conda-forge to the package channels being searched through.  This is because the "missingno" package is available via conda-forge. We do "append" so that the conda-forge channel is only used when the package is not found via default channels.
-```
 conda config --append channels conda-forge
 ```
-Now create a conda environment called simulacrum
+
+* Now create a conda environment called simulacrum using the environment yaml file for this project.
+
+```bash
+conda env create -n simulacrum environment.yml
 ```
-conda create -n simulacrum python=3.7 anaconda pandas plotly missingno
+
+* Then activate being in that environment:
+
+```bash
+conda env activate simulacrum
 ```
-Then activate being in that environment:
-```
-source activate simulacrum
-```
-After you have navigated to the EDA folder, you can start Jupyter by simply
-```
+
+Start Jupyter
+
+```bash
 jupyter notebook
 ```
-
-# Hello, is it me you're looking for?
-
-
-files and subdirectories where the notebook is:
-
-Simulacrum-data-dictionary.xlsx
-
-cancerdata_EDA.ipynb
-
-lookup_tables
-
-simulacrum_release_v1.1.0
-
-descriptions.py

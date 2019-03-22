@@ -7,9 +7,9 @@ for use with simulacrum_release_v1.1.0
 import os
 import pandas as pd
 
-default_folder="simulacrum_release_v1.1.0"
+default_folder="../simulacrum_release_v1.1.0"
 default_prefix="sim_"
-    
+
 table_names = [
     'av_patient',
     'av_tumour',
@@ -29,12 +29,12 @@ def load_table(table_name,
                prefix=default_prefix):
     """
     Loads specified table and returns it.
-    
+
     For the standard tables loads them with recommended types for each column.
-    
+
     Option to add all available descriptions.
     """
-    
+
     default_dtypes = {
         'av_patient' : {
             'PATIENTID' : int,
@@ -156,7 +156,7 @@ def load_table(table_name,
         'sact_regimen' : ['DATE_DECISION_TO_TREAT', 'START_DATE_OF_REGIMEN'],
         'sact_tumour' : []
     }
-    
+
     # set to defaults
     table_name = table_name.lower()
     if table_name in table_names:
@@ -164,7 +164,7 @@ def load_table(table_name,
             dtype=default_dtypes[table_name]
         if parse_dates==None:
             parse_dates=default_dates[table_name]
-    
+
     read_path = os.path.join(folder, prefix + table_name.lower() + ".csv")
     try:
         table = pd.read_csv(read_path, quotechar='"', dtype=dtype, parse_dates=parse_dates)
@@ -174,13 +174,13 @@ def load_table(table_name,
         import descriptions
         table = descriptions.add_descriptions(table, table_name)
     return table
-                       
+
 def all_tables(add_descriptions=False,
                folder=default_folder,
                prefix=default_prefix):
     """
     Loads all tables into dictionary with table names as keys.
-    
+
     Option to add all available descriptions.
     """
     table_dict = {}
