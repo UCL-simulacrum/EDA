@@ -53,7 +53,7 @@ conda env create -n simulacrum environment.yml
 conda env activate simulacrum
 ```
 
-Start Jupyter
+* Start Jupyter
 
 ```bash
 jupyter notebook
