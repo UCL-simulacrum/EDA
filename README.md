@@ -1,5 +1,11 @@
 # EDA
 
+# Getting the data 
+
+Data can be downloaded from https://simulacrum.healthdatainsight.org.uk/requesting-data/
+
+This should be stored inside the `EDA` directory i.e. `.../EDA/simulacrum_release_v1.1.0/` (COMMENT: Do we need to account for "version" of dataset??)
+
 # Viewing the notebook
 
 plotly doesn't seem to render on github, so view the notebook here:
