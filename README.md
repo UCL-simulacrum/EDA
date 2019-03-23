@@ -26,7 +26,7 @@ cd simulacrum
 * Note that by specifiying a directory in the unzip function with the -d option, unzip will unpack the contents into that directory.
 ```
 wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
-unzip simulacrum_release_v1.1.0.zip
+unzip simulacrum_release_v1.1.0.zip -d simulacrum_release_v1.1.0
 ```
 * Clone the EDA repository
 
