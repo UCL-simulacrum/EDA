@@ -11,7 +11,7 @@ patientpathways.ipynb:
 
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
 
-# Acquiring the data
+# Setting up the data
 
 Have a clean separate section dedicated to explaining how to acquire the data, what path to put it in, with explicit instruction of where the user should expect to find the data relative to the code base.
 
