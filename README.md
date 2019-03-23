@@ -1,12 +1,14 @@
-# EDA
-# Viewing the notebook
+# EDA (Exploratory Data Analysis)
+# Viewing the Jupyter Notebooks
 
-plotly doesn't seem to render on github, so view the notebook here:
+Plotly graphs may not directly render on github, so you can view the notebooks that use Plotly via nbviewer.jupyter.org:
 
 cancerdata_EDA.ipynb:
+
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
 
 patientpathways.ipynb:
+
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
 
 # Running the Code Locally
