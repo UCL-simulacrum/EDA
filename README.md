@@ -53,7 +53,7 @@ conda env create -f environment.yml
 * Then activate being in that environment:
 
 ```bash
-conda env activate simulacrum
+soucre activate simulacrum
 ```
 
 * Start Jupyter
