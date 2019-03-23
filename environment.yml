@@ -6,3 +6,5 @@ dependencies:
   - gensim
   - plotly
   - missingno
+  - sklearn
+  - umap-learn
