@@ -1,10 +1,12 @@
 name: simulacrum
 dependencies:
   - python=3.7
+  - gensim
+  - jupyter
+  - missingno
   - numpy
   - pandas
-  - gensim
   - plotly
-  - missingno
   - scikit-learn
   - umap-learn
+  - xlrd
