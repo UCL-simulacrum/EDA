@@ -44,10 +44,10 @@ conda update conda
 conda config --append channels conda-forge
 ```
 
-* Now create a conda environment called simulacrum using the environment yaml file for this project.
+* Now create a conda environment called simulacrum using the environment yaml file for this project.  Note that the environment name "simulacrum" is defined inside the .yml file.  
 
 ```bash
-conda env create -n simulacrum environment.yml
+conda env create -f environment.yml
 ```
 
 * Then activate being in that environment:
