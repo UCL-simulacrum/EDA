@@ -58,7 +58,7 @@ conda env create -f environment.yml
 
 * Then activate that environment to be in it:
 
-```bash
+```
 source activate simulacrum
 ```
 
