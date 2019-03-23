@@ -6,6 +6,7 @@ dependencies:
   - missingno
   - numpy
   - pandas
+  - pandasql
   - plotly
   - scikit-learn
   - umap-learn
