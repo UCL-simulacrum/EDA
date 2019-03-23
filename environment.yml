@@ -6,5 +6,6 @@ dependencies:
   - missingno
   - pandasql
   - plotly
+  - time
   - umap-learn
   
