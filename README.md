@@ -56,10 +56,15 @@ conda config --append channels conda-forge
 conda env create -f environment.yml
 ```
 
-* Then activate being in that environment:
+* Then activate that environment to be in it:
 
 ```bash
-soucre activate simulacrum
+source activate simulacrum
+```
+
+* Once in that environment, further installs are needed for one of the notebooks:
+```bash
+pip install keras tensorflow
 ```
 
 * Start Jupyter
