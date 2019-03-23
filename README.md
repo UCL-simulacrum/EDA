@@ -23,6 +23,7 @@ cd simulacrum
 ```
 
 * Download and unzip the simulacrum dataset.  If your operating system is macOS and wget is not installed, you can install it by ```brew install wget``` which uses the [Homebrew](https://brew.sh) package manager for macOS.
+* Note that by specifiying a directory in the unzip function with the -d option, unzip will unpack the contents into that directory.
 ```
 wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
 unzip simulacrum_release_v1.1.0.zip
