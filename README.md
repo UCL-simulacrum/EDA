@@ -1,13 +1,21 @@
-# EDA
-# Viewing the notebook
+# EDA (Exploratory Data Analysis)
+# Viewing the Jupyter Notebooks
 
-plotly doesn't seem to render on github, so view the notebook here:
+Plotly graphs may not directly render on github, so you can view the notebooks that use Plotly via nbviewer.jupyter.org:
 
 cancerdata_EDA.ipynb:
+
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
 
 patientpathways.ipynb:
+
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
+
+# Setting up the data
+
+Have a clean separate section dedicated to explaining how to acquire the data, what path to put it in, with explicit instruction of where the user should expect to find the data relative to the code base.
+
+For example, the user could be instructed to put the code in the absolute path $HOME/data/simulacrum_release_v1.1.0/ and the code base be modified accordingly.
 
 # Running the Code Locally
 
@@ -20,10 +28,11 @@ mkdir simulacrum
 cd simulacrum
 ```
 
-* Download and unzip the simulacrum dataset.
+* Download and unzip the simulacrum dataset.  If your operating system is macOS and wget is not installed, you can install it by ```brew install wget``` which uses the [Homebrew](https://brew.sh) package manager for macOS.
+* Note that by specifiying a directory in the unzip function with the -d option, unzip will unpack the contents into that directory.
 ```
 wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
-unzip simulacrum_release_v1.1.0.zip
+unzip simulacrum_release_v1.1.0.zip -d simulacrum_release_v1.1.0
 ```
 * Clone the EDA repository
 
@@ -41,19 +50,24 @@ conda update conda
 conda config --append channels conda-forge
 ```
 
-* Now create a conda environment called simulacrum using the environment yaml file for this project.
+* Now create a conda environment called simulacrum using the environment yaml file for this project.  Note that the environment name "simulacrum" is defined inside the .yml file.  
 
 ```bash
-conda env create -n simulacrum environment.yml
+conda env create -f environment.yml
 ```
 
-* Then activate being in that environment:
+* Then activate that environment to be in it:
 
+```
+source activate simulacrum
+```
+
+* Once in that environment, further installs are needed for one of the notebooks:
 ```bash
-conda env activate simulacrum
+pip install keras tensorflow
 ```
 
-Start Jupyter
+* Start Jupyter
 
 ```bash
 jupyter notebook
