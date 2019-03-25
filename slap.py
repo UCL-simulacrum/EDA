@@ -12,6 +12,33 @@ from plotly import tools
 import load
 import descriptions
 
+# Layout variables for plots
+font = dict(family='Courier New, monospace',
+            size=14,
+            color='#000000')
+useable_groupings = ['DEATHCAUSECODE_UNDERLYING_DESC', 'ETHNICITY_DESC',
+                     'DEATHLOCATIONCODE_DESC', ]
+# AV Patient frequency plot
+
+
+av_fr_titles = {'DEATHCAUSECODE_UNDERLYING_DESC': "Underlying Death Cause",
+                'ETHNICITY_DESC': 'Ethnicity Provided',
+                'DEATHLOCATIONCODE_DESC': "Location"}
+
+
+def frequency_plot_layout(search_var):
+    x_axis = dict(title=av_fr_titles[search_var],
+                  titlefont=font
+                  )
+    y_axis = dict(title="Counts",
+                  titlefont=font
+                  )
+
+    plt_title = "Frequency of Death by " + av_fr_titles[search_var]
+
+    return go.Layout(title=plt_title,
+                     xaxis=x_axis,
+                     yaxis=y_axis)
 
 
 def stacked_barplot(df, col1, col2, tickmode='auto'):
@@ -57,4 +84,41 @@ def stacked_barplot(df, col1, col2, tickmode='auto'):
 
     fig = go.Figure(data=data, layout=layout)
 
+    po.iplot(fig)
+
+
+def av_patient_frequency(av_patient, search_var):
+    top20 = av_patient[search_var].value_counts()[1:20].keys()
+    top20 = av_patient.loc[av_patient[search_var].isin(top20)]
+
+    top20bysex = top20.groupby(['SEX', search_var]) \
+        .agg({search_var: 'size'})
+
+    male = top20bysex.loc['1'][search_var]
+    female = top20bysex.loc['2'][search_var]
+
+    # plotly plots
+    trace1 = go.Bar(
+        x=female.index,
+        y=female.values,
+        name='female'
+    )
+    trace2 = go.Bar(
+        x=male.index,
+        y=male.values,
+        name='male'
+    )
+
+    data = [trace1, trace2]
+
+    if search_var in useable_groupings:
+
+        layout = frequency_plot_layout(search_var)
+
+    else:
+        layout = go.Layout(
+            barmode='group'
+        )
+
+    fig = go.Figure(data=data, layout=layout)
     po.iplot(fig)
