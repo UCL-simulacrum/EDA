@@ -62,7 +62,7 @@ simulacrum
 
 
 
-#### Creating a conda environment
+## Creating a conda environment
 This will create a conda development environment with all the dependencies loaded.
 
 * Update conda and append conda-forge (missingno is not available through default search channel)
