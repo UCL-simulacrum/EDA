@@ -11,15 +11,11 @@ patientpathways.ipynb:
 
 https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
 
-# Setting up the data
 
-Have a clean separate section dedicated to explaining how to acquire the data, what path to put it in, with explicit instruction of where the user should expect to find the data relative to the code base.
 
-For example, the user could be instructed to put the code in the absolute path $HOME/data/simulacrum_release_v1.1.0/ and the code base be modified accordingly.
+# Getting Started
 
-# Running the Code Locally
-
-#### Setting up the repository
+## Setting up the repository
 
 Create a directory which will hold your simulacrum project and navigate to it.  
 
@@ -34,7 +30,7 @@ Clone the EDA repository inside your project directory
 git clone git@github.com:UCL-simulacrum/EDA.git
 ```
 
-#### Getting the data
+## Getting the data
 
 Download and unzip the simulacrum dataset in your project directory (e.g. `./simulacrum/`).  If your operating system is macOS and wget is not installed, you can install it by ```brew install wget``` which uses the [Homebrew](https://brew.sh) package manager for macOS.
  
