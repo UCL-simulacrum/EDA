@@ -21,24 +21,50 @@ For example, the user could be instructed to put the code in the absolute path $
 
 #### Setting up the repository
 
-* Create a directory which will hold your simulacrum project and navigate to it.  
+Create a directory which will hold your simulacrum project and navigate to it.  
 
 ```bash
 mkdir simulacrum
 cd simulacrum
 ```
 
-* Download and unzip the simulacrum dataset.  If your operating system is macOS and wget is not installed, you can install it by ```brew install wget``` which uses the [Homebrew](https://brew.sh) package manager for macOS.
-* Note that by specifiying a directory in the unzip function with the -d option, unzip will unpack the contents into that directory.
-```
-wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
-unzip simulacrum_release_v1.1.0.zip -d simulacrum_release_v1.1.0
-```
-* Clone the EDA repository
+Clone the EDA repository inside your project directory
 
 ```bash
 git clone git@github.com:UCL-simulacrum/EDA.git
 ```
+
+#### Getting the data
+
+Download and unzip the simulacrum dataset in your project directory (e.g. `./simulacrum/`).  If your operating system is macOS and wget is not installed, you can install it by ```brew install wget``` which uses the [Homebrew](https://brew.sh) package manager for macOS.
+ 
+Note that by specifiying a directory in the unzip function with the -d option, unzip will unpack the contents into that directory.
+```
+wget https://simulacrum.healthdatainsight.org.uk/releases/simulacrum_release_v1.1.0.zip
+unzip simulacrum_release_v1.1.0.zip -d simulacrum_release_v1.1.0
+```
+
+Alternatively you can download the data [here](https://simulacrum.healthdatainsight.org.uk/requesting-data/).
+
+**NB** The data should be unzipped into the parent directory of `EDA`. Your directory structure should look something like this:
+
+```
+simulacrum
+│       
+│
+└───EDA
+│   │   cancerdata_EDA.ipynb
+│   │   patientpathways.ipynb
+|   |   ...
+│   
+|
+└───simulacrum_release_v1.1.0
+    │   create_table_sim_av_patient.sql
+    │   create_table_sim_av_tumour.sql
+    |   ...
+```
+
+
 
 #### Creating a conda environment
 This will create a conda development environment with all the dependencies loaded.
