@@ -167,7 +167,10 @@ def load_table(table_name,
 
     read_path = os.path.join(folder, prefix + table_name.lower() + ".csv")
     try:
-        table = pd.read_csv(read_path, quotechar='"', dtype=dtype, parse_dates=parse_dates)
+        if table_name == 'sact_regimen':
+            table = pd.read_csv(read_path, quotechar='"', dtype=dtype, parse_dates=parse_dates,encoding="ISO-8859-1")
+        else:
+            table = pd.read_csv(read_path, quotechar='"', dtype=dtype, parse_dates=parse_dates)
     except FileNotFoundError:
         raise ValueError("The file " + read_path + " does not exist.")
     if add_descriptions:
