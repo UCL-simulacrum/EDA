@@ -1,17 +1,4 @@
 # EDA (Exploratory Data Analysis)
-# Viewing the Jupyter Notebooks
-
-Plotly graphs may not directly render on github, so you can view the notebooks that use Plotly via nbviewer.jupyter.org:
-
-cancerdata_EDA.ipynb:
-
-https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
-
-patientpathways.ipynb:
-
-https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
-
-
 
 # Getting Started
 
@@ -94,3 +81,15 @@ pip install keras tensorflow
 ```bash
 jupyter notebook
 ```
+
+# Viewing the Jupyter Notebooks
+
+Plotly graphs may not directly render on github, so you can view the notebooks that use Plotly via nbviewer.jupyter.org:
+
+cancerdata_EDA.ipynb:
+
+https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
+
+patientpathways.ipynb:
+
+https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
