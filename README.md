@@ -84,12 +84,17 @@ jupyter notebook
 
 # Viewing the Jupyter Notebooks
 
-Plotly graphs may not directly render on github, so you can view the notebooks that use Plotly via nbviewer.jupyter.org:
+Suggested viewing order of notebooks (those notebooks with Plotly graphs do not directly render on GitHub, so they can be viewed via nbviewer.jupyter.org):
 
-cancerdata_EDA.ipynb:
+1. example_sql_queries.ipynb
 
-https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb
+2. cancerdata_EDA.ipynb (via [nbviewer](https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/cancerdata_EDA.ipynb))
 
-patientpathways.ipynb:
+3. sact_regimen_study.ipynb
 
-https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb
+4. patientpathways.ipynb (via [nbviewer](https://nbviewer.jupyter.org/github/UCL-simulacrum/EDA/blob/master/patientpathways.ipynb))
+
+
+
+
+
