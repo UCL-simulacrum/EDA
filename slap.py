@@ -193,17 +193,19 @@ def Sequenceofevents(df_full_patient_pathways,event_types,dates):
 
 def plotevents(df_event_vector,event_types):
     """plotly plot of events colour coded by event_types
-    df_event_vector: a dataframe with columns 'event_label','x','y','event_type' """
+    df_event_vector: a dataframe with columns 'event_label','x','y','event_type','event' """
     data=[]
     color = np.random.seed(seed=20)
     for event_type in event_types:
         color=np.random.randint(255, size=(1, 3))[0]
         x = df_event_vector[df_event_vector['event_type']==event_type]['x']
         y = df_event_vector[df_event_vector['event_type']==event_type]['y']
-
+        events = df_event_vector[df_event_vector['event_type']==event_type]['event']
         trace = go.Scatter( x = x,
                             y = y,
                             mode = 'markers',
+                            text = events,
+                            hoverinfo = 'text',
                             name = event_type,
                             marker = dict(size = 3,
                                           color = 'rgb({}, {}, {})'.format(*color)) )
@@ -278,11 +280,15 @@ def sequenceclusterplot(df_single_cancer,feature_space):
         color=np.random.randint(255, size=(1, 3))[0]
         x = df_single_cancer[df_single_cancer['cluster']==c]['x']
         y = df_single_cancer[df_single_cancer['cluster']==c]['y']
-
+        text = 'cluster: ' + c.astype(str) + '<br>'
+        text = text + 'PATIENTID: ' + df_single_cancer[df_single_cancer['cluster']==c]['PATIENTID'].astype(str)
+        text = text + '<br> sequence: ' + df_single_cancer[df_single_cancer['cluster']==c]['sequence'].astype(str)
         trace = go.Scattergl( x = x,
                             y = y,
                             mode = 'markers',
                             name = str(c),
+                            text = text,
+                            hoverinfo  = 'text',
                             legendgroup = str(c),
                             marker = dict(size = 4,
                                           color = 'rgb({}, {}, {})'.format(*color)) )
@@ -298,36 +304,58 @@ def sequenceclusterplot(df_single_cancer,feature_space):
     fig = dict(data=data, layout=layout)
     po.iplot(fig)
 
-def clusterinfo(df_single_cancer,df_pathway_events,single_cancer,cluster=1,top=5):
-    """display the top information of a cluster"""
-    
+def clusterinfo(df_single_cancer,
+                df_pathway_events,
+                single_cancer,
+                top=5,
+                display=['REGIMEN_OUTCOME_SUMMARY',
+                         'BENCHMARK_GROUP',
+                         'DRUG_GROUP']):
+
     #get df_pathway_events of the single cancer
     df_single_cancer_seq = df_pathway_events[df_pathway_events['PRIMARY_DIAGNOSIS']==single_cancer]
 
     #add the cluster labels into the df_single_cancer_seq
     df_single_cancer_seq = pd.merge(df_single_cancer_seq,df_single_cancer[['PATIENTID','cluster']], how = 'left')
 
+    #cluster freq
+    cluster_freq = df_single_cancer[['PATIENTID', 'cluster']]['cluster'].value_counts()
+    df_cluster_freq = pd.DataFrame({'cluster': cluster_freq.keys(),'cluster_freq':cluster_freq.values})    
+
     #remove the event type in the 'event' column
     df_single_cancer_seq['event'] = [e[len(et)+1:] for e,et in
                                     zip(df_single_cancer_seq['event'],df_single_cancer_seq['event_type'])]
-    
-    print("Cluster",cluster,"\n")
-    print("mean number of events: ",
-          "%.2f" % df_single_cancer.groupby('cluster')['sequence_length'].mean()[cluster],
-         "\n")
-    
-    print("top",top,"drugs, regimens and outcome, showing how many days from the first event that they were administered:")
-    for event_type in ['DRUG_GROUP_CORRECT','BENCHMARK_GROUP','REGIMEN_OUTCOME_SUMMARY']:
+    df_single_cancer_seq = df_single_cancer_seq[df_single_cancer_seq['event_type'].isin(display)]
 
-        df_cluster_i = df_single_cancer_seq.loc[(df_single_cancer_seq['cluster'] == cluster)
-                                      & (df_single_cancer_seq['event_type'] == event_type)]
-        top5 = df_cluster_i['event'].value_counts()[:top]
-        df_top5 = df_cluster_i[df_cluster_i['event'].isin(top5.keys())]
-        mean_days = df_top5.groupby('event')['days'].mean()
-        df_freq = pd.DataFrame(top5).reset_index().rename(columns={'index':event_type,'event':"frequency"})
-        df_days = pd.DataFrame(mean_days).reset_index().rename(columns={'event':event_type,'days':'mean days'})
-        df_freq_days = pd.merge(df_freq,df_days)
+    #make the top event_types as columns and use the events frequencies as rows
 
-        display(df_freq_days)
+    dfc = df_single_cancer_seq.groupby(['cluster','event_type','event']).agg({'event':'count'}).rename(columns={'event':'event_%'})
+    dfc = dfc.groupby(['cluster','event_type']).apply(lambda x: round(100*x/x.sum(),1))
+    
+
+    dfc = dfc.reset_index().groupby(['cluster','event_type']).apply(lambda x: x.nlargest(top,'event_%'))
+    dfc = dfc.reset_index(drop=True)
+    dfc['event'] = dfc['event_%'].astype(str) + "% " + dfc['event']
+    dfc
+
+    dfc['top'] = dfc.groupby(['cluster','event_type']).cumcount()+1
+    dfc['event_type'] = dfc['event_type'] + " " + dfc['top'].astype(str)
+    dfc = dfc.pivot(values='event',columns='event_type',index='cluster').reset_index()
+
+
+
+    #get mean days in sequence with standard deviation
+    df_single_cancer['total days in sequence'] = df_single_cancer['sequence_days'].apply(lambda x: x[-1])
+    dfcmean = df_single_cancer.groupby('cluster')[['total days in sequence']].apply(lambda x: round(x.mean()).astype(int) ).reset_index().rename(columns = {'total days in sequence':'mean'})
+    dfcstd = u"\u00B1" + " " + df_single_cancer.groupby('cluster')[['total days in sequence']].apply(lambda x: round(x.std()).astype(int) ).reset_index().rename(columns = {'total days in sequence':'std'})['std'].astype(str) 
+    dfcmean['days in sequence'] = dfcmean['mean'].astype(str) + " " + dfcstd
+    
+    #merge all information
+    df = pd.merge(dfcmean[['cluster','days in sequence']], dfc)
+    df = pd.merge(df_cluster_freq,df,on='cluster')
+    df = df.sort_values(by=['cluster'])
+    df = df.reset_index(drop=True)
+    
+    return df
     
  
