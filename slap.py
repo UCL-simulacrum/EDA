@@ -265,6 +265,110 @@ def plotpathways(df_sequences,topN,map2D):
     fig = dict(data=data, layout=layout)
     po.iplot(fig)
 
+def plotendpoints_alivedead(df_sequences, topN, map2D):
+    """plots endpoints of pathways. First colours by alive/dead then by cancer type.
+    df_sequences:dataframe with a 'sequence' column that has lists of events in a sequence
+    topN: plots the topN cancers
+    map2D: maps the event label to it's vector
+    """
+    
+    count_alive_dead = df_sequences['NEWVITALSTATUS_DESC'].value_counts()[:2]
+    total_alive_dead = count_alive_dead.sum()
+
+    fig = tools.make_subplots(rows=2, cols=2, subplot_titles=('Coloured by Alive/Dead, Cartesian',
+                                                              'Coloured by Alive/Dead, Polar',
+                                                              'Coloured by cancer type, Cartesian',
+                                                              'Coloured by cancer type, Polar'))
+
+    np.random.seed(seed=20)
+    for c in count_alive_dead.keys():
+
+        color = np.random.randint(255, size=(1, 3))[0]
+
+        c_sequences = df_sequences[df_sequences['NEWVITALSTATUS_DESC'] == c]
+        c_sequences100 = random.choices(list(c_sequences['sequence']),k=2000*count_alive_dead[c]//total_alive_dead)
+
+        legend = True
+        end_coordinates_x = []
+        end_coordinates_y = []
+        end_coordinates_r = []
+        end_coordinates_t = []
+        for s in c_sequences100:
+            event_vectors = np.array([list(map2D[e]) for e in s])
+            end_coordinates = np.sum(event_vectors, axis=0)
+            end_coordinates_x.append(end_coordinates[0])
+            end_coordinates_y.append(end_coordinates[1])
+            end_coordinates_r.append(np.sqrt(end_coordinates[0]**2 + end_coordinates[1]**2))
+            end_coordinates_t.append(np.arctan2(end_coordinates[1], end_coordinates[0]))
+
+        trace_cartesian = go.Scatter( x = end_coordinates_x,
+                            y = end_coordinates_y,
+                            mode = 'markers',
+                            name = c,
+                            opacity = 1,
+                            marker=dict(size=1,color='rgb({}, {}, {})'.format(*color)), 
+                            showlegend = legend)
+
+        trace_polar = go.Scatter( x = end_coordinates_t,
+                            y = end_coordinates_r,
+                            mode = 'markers',
+                            name = c,
+                            opacity = 1,
+                            marker=dict(size=1,color='rgb({}, {}, {})'.format(*color)), 
+                            showlegend = legend)
+        legend = False
+
+        fig.append_trace(trace_cartesian, 1, 1)
+        fig.append_trace(trace_polar, 1, 2)
+
+    count_top_cancers = df_sequences['PRIMARY_DIAGNOSIS'].value_counts()[:topN]
+    total_top_cancers = count_alive_dead.sum()
+
+    np.random.seed(seed=20)
+    for c in count_top_cancers.keys():
+
+        color = np.random.randint(255, size=(1, 3))[0]
+
+        c_sequences = df_sequences[df_sequences['PRIMARY_DIAGNOSIS'] == c]
+        c_sequences100 = random.choices(list(c_sequences['sequence']),k=2000*count_top_cancers[c]//total_top_cancers)
+
+        legend = True
+        end_coordinates_x = []
+        end_coordinates_y = []
+        end_coordinates_r = []
+        end_coordinates_t = []
+        for s in c_sequences100:
+            event_vectors = np.array([list(map2D[e]) for e in s])
+            end_coordinates = np.sum(event_vectors, axis=0)
+            end_coordinates_x.append(end_coordinates[0])
+            end_coordinates_y.append(end_coordinates[1])
+            end_coordinates_r.append(np.sqrt(end_coordinates[0]**2 + end_coordinates[1]**2))
+            end_coordinates_t.append(np.arctan2(end_coordinates[1], end_coordinates[0]))
+
+        trace_cartesian = go.Scatter( x = end_coordinates_x,
+                            y = end_coordinates_y,
+                            mode = 'markers',
+                            name = c,
+                            opacity = 1,
+                            marker=dict(size=1,color='rgb({}, {}, {})'.format(*color)), 
+                            showlegend = legend)
+
+        trace_polar = go.Scatter(x = end_coordinates_t,
+                                 y = end_coordinates_r,
+                                 mode = 'markers',
+                                 name = c,
+                                 opacity = 1,
+                                 marker=dict(size=1,color='rgb({}, {}, {})'.format(*color)), 
+                                 showlegend = legend)
+        legend = False
+
+        fig.append_trace(trace_cartesian, 2, 1)
+        fig.append_trace(trace_polar, 2, 2)
+
+    fig['layout'].update(title='Visualising ends of patient pathways')
+
+    po.iplot(fig)
+
 def sequenceclusterplot(df_single_cancer,feature_space):
     """plot the TFIDF representation of a sequence
     
