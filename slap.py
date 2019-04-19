@@ -215,7 +215,8 @@ def plotevents(df_event_vector,event_types):
                   yaxis = dict(zeroline = False,
                                title = "word2vec feature 2"),
                   xaxis = dict(zeroline = False,
-                               title = "word2vec feature 1")
+                               title = "word2vec feature 1"),
+                  hovermode = 'closest'
                  )
 
     fig = dict(data=data, layout=layout)
@@ -402,7 +403,8 @@ def sequenceclusterplot(df_single_cancer,feature_space):
                   yaxis = dict(zeroline = False,
                                title = "{} sequence feature 2".format(feature_space)),
                   xaxis = dict(zeroline = False,
-                               title = "{} sequence feature 1".format(feature_space))
+                               title = "{} sequence feature 1".format(feature_space)),
+                  hovermode = 'closest'
                  )
 
     fig = dict(data=data, layout=layout)
@@ -461,5 +463,55 @@ def clusterinfo(df_single_cancer,
     df = df.reset_index(drop=True)
     
     return df
+
+def totaldaysboxplots(df_single_cancer):
+    data = []
+    for c in df_single_cancer['cluster'].unique():
+        df_clusterc = df_single_cancer[df_single_cancer['cluster'] == c]
+        total_days = df_clusterc['sequence_days'].apply(lambda x: x[-1])
+        trace = go.Box(y = total_days,
+                       name = str(c))
+        data.append(trace)
+
+    layout = dict(title = 'Box plots of total days in a pathway for each cluster',
+                  yaxis = dict(zeroline = False,
+                               title = "Total days"),
+                  xaxis = dict(zeroline = False,
+                               title = "Cluster"),
+                  hovermode = 'closest'
+                 )
+
+    fig = dict(data=data, layout=layout)
+    po.iplot(fig)
     
+def clusterbarplots(df_single_cancer,df_full_patient_pathways,feature):
+    
+    df_full_info = pd.merge(df_single_cancer, df_full_patient_pathways, on='PATIENTID')
+    df_cluster_info = df_full_info[[feature,'cluster']]
+    df_cluster_info = df_cluster_info.groupby(['cluster',feature]).agg({feature:'count'})
+
+    clusters = sorted(df_single_cancer['cluster'].unique())
+    nclusters = len(clusters)
+    
+    fig = tools.make_subplots(rows=2, 
+                              cols=int(np.ceil(nclusters/2)), 
+                              subplot_titles=tuple("cluster " + str(c) for c in clusters),
+                              print_grid=False)
+    for i,c in enumerate(clusters):
+        color=np.random.randint(255, size=(1, 3))[0]
+        df_cluster_infoc = df_cluster_info.xs(c).rename(index = str, columns={feature:'Count'}).reset_index()
+        trace = go.Bar( x=df_cluster_infoc[feature].apply(lambda x: x[:2] + " "*len(x)),
+                        y=df_cluster_infoc['Count'],
+                        text=df_cluster_infoc['Count'].astype(str) + " " + df_cluster_infoc[feature].astype(str),
+                        hoverinfo='text',
+                        marker=dict(color='rgb({}, {}, {})'.format(*color)) )
+        fig.append_trace(trace, round(i/nclusters + 0.0001)+1, i % int(np.ceil(nclusters/2)) + 1)
+
+        
+    fig['layout'].update(height = 400, 
+                         width = 100*nclusters,
+                         showlegend = False)
+    
+    print(feature + " by cluster")
+    po.iplot(fig)
  
