@@ -1,4 +1,4 @@
-# EDA (Exploratory Data Analysis)
+# Exploration of the Simulacrum Artificial Patient-Like CancerData
 
 # Introduction
 
