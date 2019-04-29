@@ -1,5 +1,9 @@
 # EDA (Exploratory Data Analysis)
 
+# Introduction
+
+To give you some context on the work that is done in this repo we have written a report - projectreport.pdf and have made slides from our presentation - presentation.pptx (above).
+
 # Getting Started
 
 ## Setting up the repository
