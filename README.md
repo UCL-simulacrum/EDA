@@ -1,4 +1,4 @@
-# Exploration of the Simulacrum Artificial Patient-Like CancerData
+# Exploration of the Simulacrum Artificial Patient Cancer Data
 
 # Introduction
 
